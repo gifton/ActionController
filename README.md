@@ -1,10 +1,10 @@
 # Action Controller: 
 ### Used for < 25 view projects
-* Buit around an ActionController(inhareted from UIViewController) that has a dynamic view at the bottom ''' ~100px''' That changes Based on the contentViews, well, content.  Applications will include /global/ TabBarComponents that can be initiated and instantiated from any controller at any time. 
+* Buit around an ActionController(inhareted from UIViewController) that has a dynamic view at the bottom ``` ~100px ``` That changes Based on the contentViews, well, content.  Applications will include global ActionView components that can be initiated and instantiated from any controller at any time through the global delegate.
 
-* ActionView has another view directly above that is used as a complimentary display to the ContentView, and is mostly hidden. Initiate /ActionComplimentaryView as a ''' lazy ''' object.  
+* ActionView has another view directly above that is used as a complimentary display to the ContentView, and is mostly hidden. Initiate /ActionComplimentaryView as a lazy object.  
 
-* /ActionDelegate connects the ActionController to the contentView, actionComplimentaryView, and actionView.  ''' UpdateState() ''' takes in parameters of 
+* /ActionDelegate connects the ActionController to the contentView, actionComplimentaryView, and actionView.  ``` UpdateState() ``` takes in parameters of 
 	* ActionView components [[ActionViewComponent]]
 	* ActionViewBackgroundColor (uicolor)
 	* ActionComplimentaryView (uiview)
@@ -61,7 +61,7 @@ Architecture:
                                 * includes all tabbar componnents used in index
                         * Networking
                         * analytics
-* MasterControllerView/
+* ActionViewController/
 	* index
 		* initiate ActionView 
 		* UPDATE_ACTION_CONTROLLER()
@@ -74,4 +74,6 @@ Architecture:
 			* delegate
 		* pageTwo/
 			* delegate
+
+
 
