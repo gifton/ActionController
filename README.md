@@ -27,6 +27,7 @@ ActionViewController
 ContentView  MasterViewView
 
 
+
 Architecture:
 
  * Model
@@ -72,8 +73,9 @@ Architecture:
 	* pages/
 		* pageOne/
 			* delegate
+				* Switch statement with exausrtive list of outcomes for pageOne
 		* pageTwo/
 			* delegate
-
-
-
+				* Switch statement with exausrtive list of outcomes for pageOne
+Inline-style: 
+![alt text](https://s3-us-west-2.amazonaws.com/gifton/ActionController.png "Logo Title Text 1")
