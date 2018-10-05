@@ -1,34 +1,53 @@
 # Action Controller: 
-* Master View controller that has a view at the bottom ''' ~100px'''.  View at bottom of MasterViewController is variable.  Applications will include /global/ TabBarComponents that can be initiated and instantiated from any controller at any time.  MasterViewController has another view directly above the TabBarView That is used as a secondary display to the mainView, and is mostly hidden.  The initiate /MasterControllerView as a ''' lazy ''' object.  MasterViewController will have a number of delegates that define button actions, text input, database responses etc.  MasterViewController's contentView is overlayed MasterControllerView to give the effect that the view and the tabs are disconnected physically.  ContentView will be an extension of IUView that will be insaantiated with '''  init(frame: CGRect, view: viewType)
+### Used for < 25 view projects
+* Buit around an ActionController(inhareted from UIViewController) that has a dynamic view at the bottom ''' ~100px''' That changes Based on the contentViews, well, content.  Applications will include /global/ TabBarComponents that can be initiated and instantiated from any controller at any time. 
+
+* ActionView has another view directly above that is used as a complimentary display to the ContentView, and is mostly hidden. Initiate /ActionComplimentaryView as a ''' lazy ''' object.  
+
+* /ActionDelegate connects the ActionController to the contentView, actionComplimentaryView, and actionView.  ''' UpdateState() ''' takes in parameters of 
+	* ActionView components [[ActionViewComponent]]
+	* ActionViewBackgroundColor (uicolor)
+	* ActionComplimentaryView (uiview)
+	* ContentView component Updates (uiview, action)
+	* sender (uiview)
+
+MasterViewController's contentView is overlayed MasterControllerView to give the effect that the view and the tabs are disconnected physically.  ContentView will be an extension of IUView that will be insaantiated with '''  init(frame: CGRect, view: viewType)
 
 ContentView will have a delegate shared with the view at the bottom of the MAsterViewController, who inturn will controll BOTH the MasterViewView and the ContentView
 
 Heirarchy: 
-MasterViewController 
+ActionViewController 
 	|
+    ActionDelegate
 	|
     ActionView 
         |
-actionDelegate
-   /         \
-ContentView   MasterViewView
+     Delegate
+     /      \
+ContentView  MasterViewView
 
 
 Architecture:
 
  * Model
-	* FeedCell
-	* UserModel
-	* API Response Model
+	* TableCell Data Model (struct)
+	* UserModel (struct)
+	* API Response Model (decodable struct)
+	* ActionView Components (struct)
+	* ComplimentaryView (enum)
+	* updates (data)
 * Components
-	* Customized text, UI, label views etc.  
-	* All TabBar components(global)
+	* TextViews
+	* Buttons
+	* Table/collection view cell's
+	* ComplimentaryView views
+	* ActionView components
 * Pages/
 	* PageOne/
 		* index/
 			* index
 			* layout
-			* tabBarRequirements
+			* ActionViewReq's
 				*connects index to tabbar
 				* includes all tabbar componnents used in index
 			* Networking
@@ -37,18 +56,22 @@ Architecture:
 		* index/
 			* index
                         * layout                      
-                        * tabBarRequirements
+                        * ActionViewreq's
                                 *connects index to tabbar
                                 * includes all tabbar componnents used in index
                         * Networking
                         * analytics
 * MasterControllerView/
 	* index
-		* standard display
+		* initiate ActionView 
 		* UPDATE_ACTION_CONTROLLER()
 		* Switch statement controlling what gets displayed
 		* delegate that connects to tabbed pages
 	* layout/
 		* components_inividual_layout_here
 	* pages/
+		* pageOne/
+			* delegate
+		* pageTwo/
+			* delegate
 
