@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 
 class ContentView: UIView {
+    var delegate: MasterDelegate?
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
+        view.backgroundColor = .white
         addSubview(view)
         view.frame = ScreenSize.ContentFrame
+        view.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 32)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,7 +25,10 @@ class ContentView: UIView {
     var view: UIView = UIView()
     
     public func setContentView(content: ContentClass) {
-        self.view = content
+        print(content)
+        self.view.backgroundColor = .red
+        self.view.addSubview(content)
+        
     }
 }
 

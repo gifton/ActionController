@@ -6,13 +6,12 @@ class MasterViewController: UIViewController, MasterDelegate {
     
 //    var content: ContentClass = DashboardContetView(frame: ScreenSize.ContentFrame)
     var action: ActionClass = ActionView(frame: ScreenSize.ActionFrame)
-    var content: UIView = ContentView()
+    var content = ContentView(frame: ScreenSize.ContentFrame)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         action.delegate = self
         content.delegate = self
-        addContent(.dashboard)
         view.backgroundColor = .remberBGDark
         view.addSubview(content)
         view.addSubview(action)
@@ -24,19 +23,19 @@ class MasterViewController: UIViewController, MasterDelegate {
         switch input {
         case ContentViewType.dashboard:
             print("Dashboard!")
-            self.content.setContent
+            self.content.setContentView(content: DashboardContetView(frame: ScreenSize.ContentFrame))
         case ContentViewType.profile:
             print("Profile!")
-            self.content = ProfileViewContent()
+            self.content.setContentView(content: ProfileViewContent(frame: ScreenSize.ContentFrame))
         case ContentViewType.profileDetail:
             print("ProfileDetail!")
-            self.content = ProfileDetailViewContent()
+            self.content.setContentView(content: ProfileDetailViewContent(frame: ScreenSize.ContentFrame))
         case ContentViewType.thoughtDetail:
             print("ThoughtDetail!")
-            self.content = ThoughtsDetailViewContent()
+            self.content.setContentView(content: ThoughtsDetailViewContent(frame: ScreenSize.ContentFrame))
         case ContentViewType.thoughts:
             print("ThoughtVIew!")
-            self.content = ThoughtsViewContent()
+            self.content.setContentView(content: ThoughtsViewContent(frame: ScreenSize.ContentFrame))
         }
     }
     

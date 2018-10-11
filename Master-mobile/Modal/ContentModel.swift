@@ -28,7 +28,7 @@ class ContentClass: UIView {
         super.init(frame: frame)
         addSubview(title)
         title.frame = CGRect(x: 25, y: 100, width: ScreenSize.SCREEN_WIDTH - 50, height: 50)
-        roundCorners(corners: [.bottomLeft, .bottomRight], radius: 35)
+        roundCorners(corners: [.bottomLeft, .bottomRight], radius: 32)
     }
     
     required init?(coder aDecoder: NSCoder) {
