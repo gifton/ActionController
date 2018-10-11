@@ -12,7 +12,7 @@ pod 'ChameleonFramework'
 pod 'DefaultsKit'
 pod 'Alamofire'
 pod 'SlackTextViewController'
-pod 'PermissionScope'
+#pod 'PermissionScope'
 pod 'FontAwesomeKit'
 pod 'SwiftyJSON'
   # Pods for Master-mobile

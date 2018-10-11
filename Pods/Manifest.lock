@@ -27,7 +27,6 @@ PODS:
   - FontAwesomeKit/Zocial (2.2.1):
     - FontAwesomeKit/Core
   - IQKeyboardManagerSwift (6.0.4)
-  - PermissionScope (1.1.1)
   - SlackTextViewController (1.9.6)
   - SwiftyJSON (4.1.0)
 
@@ -39,7 +38,6 @@ DEPENDENCIES:
   - DZNEmptyDataSet
   - FontAwesomeKit
   - IQKeyboardManagerSwift (~> 6.0.1)
-  - PermissionScope
   - SlackTextViewController
   - SwiftyJSON
 
@@ -51,7 +49,6 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - FontAwesomeKit
     - IQKeyboardManagerSwift
-    - PermissionScope
     - SlackTextViewController
     - SwiftyJSON
 
@@ -62,10 +59,9 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
   IQKeyboardManagerSwift: 36dbe324b4f9793f5f41ba5227f3e7c76dfefd50
-  PermissionScope: a30c16e015779ba27c97c124e7539e27b5829de2
   SlackTextViewController: b854e62c1c156336bc4fd409c6ca79b5773e8f9d
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 587ad6a937c67df31e675b3a5dc500a870af5576
+PODFILE CHECKSUM: 446ef065ee7d93758b66df6bb6243209baf05280
 
 COCOAPODS: 1.5.3
