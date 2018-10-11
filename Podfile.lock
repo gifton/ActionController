@@ -1,0 +1,71 @@
+PODS:
+  - Alamofire (4.7.2)
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - DefaultsKit (0.0.9)
+  - DZNEmptyDataSet (1.8.1)
+  - FontAwesomeKit (2.2.1):
+    - FontAwesomeKit/Core (= 2.2.1)
+    - FontAwesomeKit/FontAwesome (= 2.2.1)
+    - FontAwesomeKit/FoundationIcons (= 2.2.1)
+    - FontAwesomeKit/IonIcons (= 2.2.1)
+    - FontAwesomeKit/Material (= 2.2.1)
+    - FontAwesomeKit/Octicons (= 2.2.1)
+    - FontAwesomeKit/Zocial (= 2.2.1)
+  - FontAwesomeKit/Core (2.2.1)
+  - FontAwesomeKit/FontAwesome (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Material (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Octicons (2.2.1):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.2.1):
+    - FontAwesomeKit/Core
+  - IQKeyboardManagerSwift (6.0.4)
+  - PermissionScope (1.1.1)
+  - SlackTextViewController (1.9.6)
+  - SwiftyJSON (4.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Alamofire (~> 4.7.2)
+  - ChameleonFramework
+  - DefaultsKit
+  - DZNEmptyDataSet
+  - FontAwesomeKit
+  - IQKeyboardManagerSwift (~> 6.0.1)
+  - PermissionScope
+  - SlackTextViewController
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ChameleonFramework
+    - DefaultsKit
+    - DZNEmptyDataSet
+    - FontAwesomeKit
+    - IQKeyboardManagerSwift
+    - PermissionScope
+    - SlackTextViewController
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DefaultsKit: e47d11c54a53c66f9e5c65a1992dead90bc7144f
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  IQKeyboardManagerSwift: 36dbe324b4f9793f5f41ba5227f3e7c76dfefd50
+  PermissionScope: a30c16e015779ba27c97c124e7539e27b5829de2
+  SlackTextViewController: b854e62c1c156336bc4fd409c6ca79b5773e8f9d
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+
+PODFILE CHECKSUM: 587ad6a937c67df31e675b3a5dc500a870af5576
+
+COCOAPODS: 1.5.3

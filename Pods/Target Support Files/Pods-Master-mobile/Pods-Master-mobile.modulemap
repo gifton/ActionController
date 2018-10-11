@@ -1,0 +1,6 @@
+framework module Pods_Master_mobile {
+  umbrella header "Pods-Master-mobile-umbrella.h"
+
+  export *
+  module * { export * }
+}
