@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6258E0E4E120E918CC59A7A0 /* Pods_Master_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E269C81B355EB37973ECE42 /* Pods_Master_mobile.framework */; };
+		D78780F2216FD56B0057A88F /* MasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78780F1216FD56B0057A88F /* MasterController.swift */; };
 		D7C04117216D410F0007FA85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04116216D410F0007FA85 /* AppDelegate.swift */; };
 		D7C04119216D410F0007FA85 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04118216D410F0007FA85 /* MasterViewController.swift */; };
 		D7C0411C216D410F0007FA85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7C0411A216D410F0007FA85 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		3E269C81B355EB37973ECE42 /* Pods_Master_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42717CE6E5B9657D4FCBF6C5 /* Pods-Master-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Master-mobile/Pods-Master-mobile.release.xcconfig"; sourceTree = "<group>"; };
 		93593EF3E5C01EC2AC4CC642 /* Pods-Master-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Master-mobile/Pods-Master-mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		D78780F1216FD56B0057A88F /* MasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterController.swift; sourceTree = "<group>"; };
 		D7C04113216D410F0007FA85 /* Master-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Master-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C04116216D410F0007FA85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7C04118216D410F0007FA85 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D78780F0216FD5540057A88F /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				D7C0412C216D74D70007FA85 /* MasterDelegate.swift */,
+				D78780F1216FD56B0057A88F /* MasterController.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
 		D7C0410A216D410F0007FA85 = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				D7C04118216D410F0007FA85 /* MasterViewController.swift */,
-				D7C0412C216D74D70007FA85 /* MasterDelegate.swift */,
 			);
 			path = Master;
 			sourceTree = "<group>";
@@ -174,6 +184,7 @@
 		D7C04148216E68ED0007FA85 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				D78780F0216FD5540057A88F /* Master */,
 				D7C04156216F1B540007FA85 /* action */,
 				D7C04149216E68FA0007FA85 /* Session.swift */,
 				D7C0414F216F0EC30007FA85 /* ContentModel.swift */,
@@ -336,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C04150216F0EC30007FA85 /* ContentModel.swift in Sources */,
+				D78780F2216FD56B0057A88F /* MasterController.swift in Sources */,
 				D7C0414A216E68FA0007FA85 /* Session.swift in Sources */,
 				D7C04155216F178B0007FA85 /* ActionClass.swift in Sources */,
 				D7C04131216D76BF0007FA85 /* ActionModels.swift in Sources */,

@@ -13,7 +13,7 @@ import ChameleonFramework
 class ActionView: ActionClass {
     
     //initate vars
-    let icons = ActionImages.init(leftIconActive: #imageLiteral(resourceName: "Thought"), rightIconActive: #imageLiteral(resourceName: "shuttle"), leftIcon: #imageLiteral(resourceName: "Thoughts-icon"), rightIcon: #imageLiteral(resourceName: "shuttle"))
+    let icons = ActionImages.init(leftIconActive: #imageLiteral(resourceName: "Thought"), rightIconActive: #imageLiteral(resourceName: "icons8-ios-photos"), leftIcon: #imageLiteral(resourceName: "Thoughts-icon"), rightIcon: #imageLiteral(resourceName: "shuttle"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)

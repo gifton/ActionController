@@ -12,6 +12,7 @@ import UIKit
 enum ActionComponent {
     case leftButton
     case rightButton
+    case clear
     enum center {
         case weather
         case home
@@ -31,6 +32,12 @@ struct ActionPayload {
         self.actionCenter = actionCenter
         self.content = content
     }
+    enum cases {
+        case incorrect
+        case correct
+        
+    }
+    static let notAvailable = ActionPayload.init(action: ActionComponent.clear, actionCenter: .weather, content: .dashboard)
 }
 
 enum WeatherType {

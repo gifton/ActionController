@@ -18,10 +18,3 @@ protocol MasterDelegate {
     func SetActionViewComponents(buttons: ActionComponent, center: ActionComponent.center)
     
 }
-
-class MasterController: UIViewController {
-    var action: ActionClass?
-    var content: ContentClass?
-    
-    
-}

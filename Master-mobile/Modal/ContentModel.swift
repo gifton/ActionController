@@ -22,6 +22,7 @@ class ContentClass: UIView {
     open var backgButtonRecipiant: ContentClass?
     open var title = UILabel()
     open var type: ContentViewType?
+    var delegate: MasterDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

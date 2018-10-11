@@ -24,16 +24,17 @@ class ActionClass: UIView {
     var leftButton: ActionButton = {
         let payload = ActionPayload.init(action: .leftButton, actionCenter: ActionComponent.center.weather, content: ContentViewType.thoughts)
         let button = ActionButton()
+        button.setAttributs(payload)
         button.frame.size = CGSize(width: 30, height: 30)
-        button.addTarget(self, action: #selector(leftButtonClicked), for: .touchUpInside)
+        button.addTarget(self, action: #selector(leftButtonClicked(sender:)), for: .touchUpInside)
         return button
     }()
     var rightButton: ActionButton = {
         let payload = ActionPayload.init(action: .rightButton, actionCenter: ActionComponent.center.home, content: ContentViewType.profile)
         let button = ActionButton()
-        button.frame.size = CGSize(width: 30, height: 30)
-        button.addTarget(self, action: #selector(leftButtonClicked), for: .touchUpInside)
         button.setAttributs(payload)
+        button.frame.size = CGSize(width: 30, height: 30)
+        button.addTarget(self, action: #selector(rightButtonClicked(sender:)), for: .touchUpInside)
         return button
     }()
     
@@ -88,9 +89,9 @@ class ActionClass: UIView {
         //handle buttons
         switch buttons {
         case .leftButton:
-           self.selectLeftButton(sender: self)
+           self.selectLeftButton()
         default:
-            self.selectRightButton(sender: self)
+            self.selectRightButton()
         }
     }
     
@@ -102,21 +103,33 @@ class ActionClass: UIView {
         self.leftButton.isSelected = false
         self.rightButton.isSelected = false
     }
-    private func selectRightButton(sender: Any) {
+    private func selectRightButton(sender: ActionPayload? = ActionPayload.notAvailable) {
         self.leftButton.isSelected = false
         self.rightButton.isSelected = true
-        print("This was activated!: button, right")
+        guard let sender: ActionPayload = sender else { return }
+        self.delegate?.SetContentView(viewType: sender.content)
     }
-    private func selectLeftButton(sender: Any) {
+    private func selectLeftButton(sender: ActionPayload? = ActionPayload.notAvailable) {
         self.rightButton.isSelected = false
         self.leftButton.isSelected = true
-        print("This was activated!: button, left")
+        guard let sender: ActionPayload = sender else { return }
+        self.delegate?.SetContentView(viewType: sender.content)
     }
     
     @objc func leftButtonClicked(sender: ActionButton){
-        selectLeftButton(sender: self)
+        guard var newSender: ActionPayload = sender.actionPayload else {
+            var newSender: ActionPayload = ActionPayload.notAvailable
+            return
+        }
+        selectLeftButton(sender: newSender)
+        print("leftbuttonclicked")
     }
     @objc func rightButtonClicked(sender: ActionButton) {
-        selectLeftButton(sender: sender.actionPayload)
+        guard var newSender: ActionPayload = sender.actionPayload else {
+            var newSender: ActionPayload = ActionPayload.notAvailable
+            return
+        }
+        selectRightButton(sender: newSender)
+        print("rigthButtonclicked")
     }
 }

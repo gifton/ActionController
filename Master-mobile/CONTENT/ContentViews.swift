@@ -9,6 +9,24 @@
 import Foundation
 import UIKit
 
+class ContentView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .white
+        addSubview(view)
+        view.frame = ScreenSize.ContentFrame
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    var view: UIView = UIView()
+    
+    public func setContentView(content: ContentClass) {
+        self.view = content
+    }
+}
+
 class DashboardContetView: ContentClass {
     override init(frame: CGRect) {
         super.init(frame: frame)
