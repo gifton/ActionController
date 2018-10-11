@@ -10,10 +10,8 @@ import Foundation
 import UIKit
 
 enum ActionComponent {
-    case leftButtonActive
-    case leftButtonInactive
-    case rightButtonActive
-    case rightButtonInactive
+    case leftButton
+    case rightButton
     enum center {
         case weather
         case home

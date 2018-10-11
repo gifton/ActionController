@@ -15,7 +15,7 @@ protocol MasterDelegate {
     func SetContentView(viewType: ContentViewType)
     
     //change actionView
-    func SetActionViewComponents(components: [ActionComponent])
+    func SetActionViewComponents(buttons: ActionComponent, center: ActionComponent.center)
     
 }
 

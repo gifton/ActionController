@@ -49,7 +49,7 @@ extension String {
 }
 
 extension UIView {
-    func retrieveCenterView(sender: UIView, input: ActionComponent.center) -> UIView {
+    func retrieveCenterView(sender: UIView, input: ActionComponent.center) -> ActionCenter {
         switch input {
         case .weather:
             print("Weather requested")
@@ -68,18 +68,18 @@ extension UIView {
             return ToggleView()
         }
     }
-    func retrieveActionView(_ input: [ActionComponent]) {
-        for component in input {
-            switch component {
-            case .leftButtonActive:
-                print("Nothing")
-            default:
-                print("uhg")
-            }
-        }
-    }
-    
-    func retrieveContentView(sender: UIView, input: ContentViewType) -> ContentClass {
+//    func retrieveActionView(_ input: ActionComponent) -> ActionButton {
+//        for component in input {
+//            switch component {
+//            case .leftButton:
+//                return
+//            default:
+//                print("uhg")
+//            }
+//        }
+//    }
+//
+    func retrieveContentView( input: ContentViewType) -> ContentClass {
         switch input {
         case ContentViewType.dashboard:
             print("Dashboard!")

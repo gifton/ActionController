@@ -8,19 +8,20 @@
 
 import Foundation
 import UIKit
-
+import ChameleonFramework
 
 class ActionView: ActionClass {
     
     //initate vars
-    let icons = ActionImages.init(leftIconActive: #imageLiteral(resourceName: "Thought"), rightIconActive: #imageLiteral(resourceName: "shuttle"), leftIcon: #imageLiteral(resourceName: "Thoughts-icon"), rightIcon: #imageLiteral(resourceName: "Thought-small"))
+    let icons = ActionImages.init(leftIconActive: #imageLiteral(resourceName: "Thought"), rightIconActive: #imageLiteral(resourceName: "shuttle"), leftIcon: #imageLiteral(resourceName: "Thoughts-icon"), rightIcon: #imageLiteral(resourceName: "shuttle"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .cyan
-        
-        
+        backgroundColor = .remberBGDark
+        self.buildOut(actionCenter: .weather, icons: icons)
     }
+    
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

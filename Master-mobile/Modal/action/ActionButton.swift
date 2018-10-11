@@ -20,7 +20,7 @@ class ActionButton: UIButton {
         self.inactiveImage = inactive
         self.layer.cornerRadius = self.frame.height / 2
         self.setImage(self.inactiveImage, for: .normal)
-        self.setImage(self.activeImage, for: .focused)
+        self.setImage(self.activeImage, for: .selected)
     }
     
     func setAttributs(_ actionPayload: ActionPayload) {

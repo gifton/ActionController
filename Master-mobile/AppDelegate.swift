@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = .cyan
+        window?.backgroundColor = .remberBGDark
         
         window?.rootViewController = MasterViewController()
         window?.makeKeyAndVisible()

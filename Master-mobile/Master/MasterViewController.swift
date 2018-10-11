@@ -12,16 +12,16 @@ class MasterViewController: UIViewController, MasterDelegate {
         
         action.delegate = self
         
-        view.backgroundColor = .cyan
+        view.backgroundColor = .remberBGDark
         view.addSubview(content)
         view.addSubview(action)
     }
     
-    func SetActionViewComponents(components: [ActionComponent]) {
-        print("we'll add components later")
+    func SetContentView(viewType: ContentViewType) {
+        self.content = content.retrieveContentView(input: viewType)
     }
     
-    func SetContentView(viewType: ContentViewType) {
-        self.content = content.retrieveContentView(sender: content, input: viewType)
+    func SetActionViewComponents(buttons: ActionComponent, center: ActionComponent.center) {
+        self.action.changeActionView(buttons: buttons, center: center)
     }
 }

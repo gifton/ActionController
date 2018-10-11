@@ -12,7 +12,7 @@ import UIKit
 class DashboardContetView: ContentClass {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.orange
+        backgroundColor = UIColor.remberDarkGray
         title.text = "DashboardContetView"
         type = .dashboard
     }

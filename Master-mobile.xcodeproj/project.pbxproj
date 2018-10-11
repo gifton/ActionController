@@ -116,14 +116,14 @@
 		D7C04115216D410F0007FA85 /* Master-mobile */ = {
 			isa = PBXGroup;
 			children = (
-				D7C04148216E68ED0007FA85 /* Modal */,
 				D7C04116216D410F0007FA85 /* AppDelegate.swift */,
+				D7C0411D216D41100007FA85 /* Assets.xcassets */,
+				D7C04148216E68ED0007FA85 /* Modal */,
 				D7C0413C216E5CEF0007FA85 /* CONTENT */,
 				D7C04139216DBE310007FA85 /* Action */,
 				D7C04136216DB5F90007FA85 /* Master */,
 				D7C0413D216E65000007FA85 /* Helpers */,
 				D7C0411A216D410F0007FA85 /* Main.storyboard */,
-				D7C0411D216D41100007FA85 /* Assets.xcassets */,
 				D7C0411F216D41100007FA85 /* LaunchScreen.storyboard */,
 				D7C04122216D41100007FA85 /* Info.plist */,
 			);

@@ -8,12 +8,13 @@
 
 import Foundation
 import UIKit
+import ChameleonFramework
 
 class weatherView: ActionCenter {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.type = ActionComponent.center.weather
-        self.backgroundColor = .mainGreen
+        self.backgroundColor = UIColor.remberBGLight.withAlphaComponent(0.25)
     }
     
     required init?(coder aDecoder: NSCoder) {
