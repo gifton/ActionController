@@ -81,52 +81,60 @@ class ActionClass: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func changeActionView(buttons: ActionComponent, center: ActionComponent.center) {
-        //deal with center
-        let view = self.retrieveCenterView(sender: self, input: center)
-        self.actionCenter = view
+    public func updateActionView(buttons: ActionComponent, center: ActionComponent.center) {
         
-        //handle buttons
+        for sub in self.subviews as [UIView] {
+            sub.removeFromSuperview()
+        }
+        self.actionCenterController = center
+        
+        //handle button
         switch buttons {
         case .leftButton:
-           self.selectLeftButton()
+            self.leftButton.isSelected = true
+            self.rightButton.isSelected = false
         default:
-            self.selectRightButton()
+            self.leftButton.isSelected = false
+            self.rightButton.isSelected = true
         }
+        self.builtLayout()
+    
     }
     
-    func changeContent(content: ContentViewType) {
-        self.delegate?.SetContentView(viewType: content)
-    }
-    
+    //functions connection outside of class
     public func clearButtons(sender: Any) {
         self.leftButton.isSelected = false
         self.rightButton.isSelected = false
     }
+    
     private func selectRightButton(sender: ActionPayload? = ActionPayload.notAvailable) {
         self.leftButton.isSelected = false
         self.rightButton.isSelected = true
         guard let sender: ActionPayload = sender else { return }
         self.delegate?.SetContentView(viewType: sender.content)
+//        self.delegate?.SetActionViewComponents(buttons: sender.action, center: sender.actionCenter)
+        self.updateActionView(buttons: sender.action, center: sender.actionCenter)
     }
+    
     private func selectLeftButton(sender: ActionPayload? = ActionPayload.notAvailable) {
         self.rightButton.isSelected = false
         self.leftButton.isSelected = true
         guard let sender: ActionPayload = sender else { return }
         self.delegate?.SetContentView(viewType: sender.content)
+//        self.delegate?.SetActionViewComponents(buttons: sender.action, center: sender.actionCenter)
+        self.updateActionView(buttons: sender.action, center: sender.actionCenter)
     }
     
+    //functions for tabButtons
     @objc func leftButtonClicked(sender: ActionButton){
-        guard var newSender: ActionPayload = sender.actionPayload else {
-            var newSender: ActionPayload = ActionPayload.notAvailable
+        guard let newSender: ActionPayload = sender.actionPayload else {
             return
         }
         selectLeftButton(sender: newSender)
         print("leftbuttonclicked")
     }
     @objc func rightButtonClicked(sender: ActionButton) {
-        guard var newSender: ActionPayload = sender.actionPayload else {
-            var newSender: ActionPayload = ActionPayload.notAvailable
+        guard let newSender: ActionPayload = sender.actionPayload else {
             return
         }
         selectRightButton(sender: newSender)

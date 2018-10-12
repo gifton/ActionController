@@ -9,18 +9,7 @@
 import Foundation
 import UIKit
 
-enum ActionComponent {
-    case leftButton
-    case rightButton
-    case clear
-    enum center {
-        case weather
-        case home
-        case confirm
-        case delete
-        case toggle
-    }
-}
+
 
 //Components that need to be updated. all "ActionButtons" have an active action payload so when user clicks, action parser can dissect and render views
 struct ActionPayload {

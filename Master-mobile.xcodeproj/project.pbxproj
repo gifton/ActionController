@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6258E0E4E120E918CC59A7A0 /* Pods_Master_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E269C81B355EB37973ECE42 /* Pods_Master_mobile.framework */; };
+		D74337A521700EB1008D9777 /* DashboardViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74337A421700EB1008D9777 /* DashboardViewContent.swift */; };
+		D74337A721701113008D9777 /* ActionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74337A621701113008D9777 /* ActionComponent.swift */; };
 		D78780F2216FD56B0057A88F /* MasterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78780F1216FD56B0057A88F /* MasterController.swift */; };
 		D7C04117216D410F0007FA85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04116216D410F0007FA85 /* AppDelegate.swift */; };
 		D7C04119216D410F0007FA85 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C04118216D410F0007FA85 /* MasterViewController.swift */; };
@@ -39,6 +41,8 @@
 		3E269C81B355EB37973ECE42 /* Pods_Master_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Master_mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42717CE6E5B9657D4FCBF6C5 /* Pods-Master-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Master-mobile/Pods-Master-mobile.release.xcconfig"; sourceTree = "<group>"; };
 		93593EF3E5C01EC2AC4CC642 /* Pods-Master-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Master-mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Master-mobile/Pods-Master-mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		D74337A421700EB1008D9777 /* DashboardViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewContent.swift; sourceTree = "<group>"; };
+		D74337A621701113008D9777 /* ActionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionComponent.swift; sourceTree = "<group>"; };
 		D78780F1216FD56B0057A88F /* MasterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterController.swift; sourceTree = "<group>"; };
 		D7C04113216D410F0007FA85 /* Master-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Master-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C04116216D410F0007FA85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C0413A216DC58B0007FA85 /* ContentViews.swift */,
+				D74337A421700EB1008D9777 /* DashboardViewContent.swift */,
 			);
 			path = CONTENT;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				D7C04154216F178B0007FA85 /* ActionClass.swift */,
 				D7C04159216F22480007FA85 /* ActionCenter.swift */,
 				D7C0415B216F2D110007FA85 /* ActionCenterManager.swift */,
+				D74337A621701113008D9777 /* ActionComponent.swift */,
 			);
 			path = action;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				D7C04119216D410F0007FA85 /* MasterViewController.swift in Sources */,
 				D7C04141216E679C0007FA85 /* UIApplicationExtension.swift in Sources */,
 				D7C04117216D410F0007FA85 /* AppDelegate.swift in Sources */,
+				D74337A521700EB1008D9777 /* DashboardViewContent.swift in Sources */,
 				D7C0414E216E69E10007FA85 /* JsonExtension.swift in Sources */,
 				D7C04153216F176D0007FA85 /* ActionButton.swift in Sources */,
 				D7C04158216F21390007FA85 /* ActionCenterViews.swift in Sources */,
@@ -362,6 +369,7 @@
 				D7C0413B216DC58B0007FA85 /* ContentViews.swift in Sources */,
 				D7C04135216D7B420007FA85 /* Extensions.swift in Sources */,
 				D7C0412D216D74D70007FA85 /* MasterDelegate.swift in Sources */,
+				D74337A721701113008D9777 /* ActionComponent.swift in Sources */,
 				D7C0413F216E65120007FA85 /* Style.swift in Sources */,
 				D7C04138216DBE0F0007FA85 /* ActionView.swift in Sources */,
 				D7C0415A216F22480007FA85 /* ActionCenter.swift in Sources */,

@@ -62,7 +62,7 @@ class HomeView: ActionCenter {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.type = ActionComponent.center.home
-        self.backgroundColor = UIColor.mainYellow
+        self.backgroundColor = UIColor.flatLime()
     }
     
     required init?(coder aDecoder: NSCoder) {

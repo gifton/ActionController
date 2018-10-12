@@ -3,6 +3,11 @@ import UIKit
 import Foundation
 
 class MasterViewController: UIViewController, MasterDelegate {
+    func SetContentView(viewType: ContentViewType) {
+        addContent(viewType)
+        print("masterViewcontroller recieved instructions: \(viewType)")
+    }
+    
     
 //    var content: ContentClass = DashboardContetView(frame: ScreenSize.ContentFrame)
     var action: ActionClass = ActionView(frame: ScreenSize.ActionFrame)
@@ -39,12 +44,8 @@ class MasterViewController: UIViewController, MasterDelegate {
         }
     }
     
-    func SetContentView(viewType: ContentViewType) {
-        addContent(viewType)
-        print("masterViewcontroller recieved instructions: \(viewType)")
-    }
     
     func SetActionViewComponents(buttons: ActionComponent, center: ActionComponent.center) {
-        self.action.changeActionView(buttons: buttons, center: center)
+        self.action.updateActionView(buttons: buttons, center: center)
     }
 }

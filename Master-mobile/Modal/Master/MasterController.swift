@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
-class MasterController: UIViewController {
-
+class Chancellor: UIViewController,  ChancellorDelegate{
+    
+    func SetContentView(viewType: ContentViewType) {
+        print("Nithing:")
+    }
+    
+    func SetActionViewComponents(buttons: ActionComponent, center: ActionComponent.center) {
+        print("Nithing:")
+    }
 }

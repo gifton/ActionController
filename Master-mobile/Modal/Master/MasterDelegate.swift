@@ -18,3 +18,12 @@ protocol MasterDelegate {
     func SetActionViewComponents(buttons: ActionComponent, center: ActionComponent.center)
     
 }
+
+protocol ChancellorDelegate {
+    //change contentView
+    func SetContentView(viewType: ContentViewType)
+    
+    //change actionView
+    func SetActionViewComponents(buttons: ActionComponent, center: ActionComponent.center)
+    
+}
