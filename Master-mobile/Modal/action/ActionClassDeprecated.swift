@@ -24,7 +24,7 @@ class ActionClass: UIView {
     var leftButton: ActionButton = {
         let payload = ActionPayload.init(action: .leftButton, actionCenter: ActionComponent.center.weather, content: ContentViewType.thoughts)
         let button = ActionButton()
-        button.setAttributs(payload)
+        button.setAttributes(payload)
         button.frame.size = CGSize(width: 30, height: 30)
         button.addTarget(self, action: #selector(leftButtonClicked(sender:)), for: .touchUpInside)
         return button
@@ -32,7 +32,7 @@ class ActionClass: UIView {
     var rightButton: ActionButton = {
         let payload = ActionPayload.init(action: .rightButton, actionCenter: ActionComponent.center.home, content: ContentViewType.profile)
         let button = ActionButton()
-        button.setAttributs(payload)
+        button.setAttributes(payload)
         button.frame.size = CGSize(width: 30, height: 30)
         button.addTarget(self, action: #selector(rightButtonClicked(sender:)), for: .touchUpInside)
         return button
@@ -44,7 +44,7 @@ class ActionClass: UIView {
     //functions
     
     //initialize conveninace to have actoincenter placed automatically, dont use if you desire a custom view in middle
-    func buildOut(actionCenter: ActionComponent.center, icons: ActionImages, leftIcon: UIImage = #imageLiteral(resourceName: "icons8-ios-photos"), rightIcon: UIImage = #imageLiteral(resourceName: "icons8-ios-photos")) {
+    func buildOut(actionCenter: ActionComponent.center, icons: ActionImages) {
         self.icons = icons
         self.actionCenterController = actionCenter
         self.builtLayout()
@@ -100,19 +100,12 @@ class ActionClass: UIView {
         self.builtLayout()
     
     }
-    
-    //functions connection outside of class
-    public func clearButtons(sender: Any) {
-        self.leftButton.isSelected = false
-        self.rightButton.isSelected = false
-    }
-    
+
     private func selectRightButton(sender: ActionPayload? = ActionPayload.notAvailable) {
         self.leftButton.isSelected = false
         self.rightButton.isSelected = true
         guard let sender: ActionPayload = sender else { return }
         self.delegate?.SetContentView(viewType: sender.content)
-//        self.delegate?.SetActionViewComponents(buttons: sender.action, center: sender.actionCenter)
         self.updateActionView(buttons: sender.action, center: sender.actionCenter)
     }
     
@@ -121,7 +114,6 @@ class ActionClass: UIView {
         self.leftButton.isSelected = true
         guard let sender: ActionPayload = sender else { return }
         self.delegate?.SetContentView(viewType: sender.content)
-//        self.delegate?.SetActionViewComponents(buttons: sender.action, center: sender.actionCenter)
         self.updateActionView(buttons: sender.action, center: sender.actionCenter)
     }
     

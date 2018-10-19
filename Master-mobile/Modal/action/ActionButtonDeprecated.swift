@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class ActionButton: UIButton {
+    
     var activeImage = UIImage()
     var inactiveImage = UIImage()
     var actionPayload: ActionPayload?
@@ -23,7 +24,7 @@ class ActionButton: UIButton {
         self.setImage(self.activeImage, for: .selected)
     }
     
-    func setAttributs(_ actionPayload: ActionPayload) {
+    func setAttributes(_ actionPayload: ActionPayload) {
         self.actionPayload = actionPayload
     }
 }

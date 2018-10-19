@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ContentView: UIView {
+class ContentViews: UIView {
     var delegate: MasterDelegate?
     override init(frame: CGRect) {
         super.init(frame: frame)

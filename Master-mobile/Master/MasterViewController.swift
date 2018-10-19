@@ -11,7 +11,7 @@ class MasterViewController: UIViewController, MasterDelegate {
     
 //    var content: ContentClass = DashboardContetView(frame: ScreenSize.ContentFrame)
     var action: ActionClass = ActionView(frame: ScreenSize.ActionFrame)
-    var content = ContentView(frame: ScreenSize.ContentFrame)
+    var content = ContentViews(frame: ScreenSize.ContentFrame)
     
     override func viewDidLoad() {
         super.viewDidLoad()

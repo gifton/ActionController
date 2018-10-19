@@ -1,0 +1,103 @@
+MVP Components
+
+1: Master controller
+	action: ActionClass
+	content: ContentClass
+2: Master Delegate
+	func(SetContentView)
+	func(setActionView)
+3: ActionClass
+	barButtons(Left and right)
+	Delegate: Master Delegate?
+	centerView: ActionCenter
+	func(buildout) <- setting icons, action center
+	func(buildLayout)
+	Public func(updateActionView) <- buttons and center, called from Master
+	private func(left, right button clicked, centerButton clicked) 
+2: ActionView
+	icons: ASctionImages
+	self.buildOut()
+5: ContentClass
+	backButton: ActionoButton
+	backButtonRecipiant: COntentViewType
+	title: Label
+	type: ContentViewType
+	delegate: MasterDelegate
+6: ContentView 
+	delegate: MasterDelegate
+	view: view(frame screensize.contentFrame)
+	func(setView)
+7: Models
+	ActionPayload
+	WeatherType
+	ActionImages
+	ActionButton()
+	ActionCenter
+	ActionComponent
+	ContentViewType
+//------------------------------------------------------------------------------------------
+New Structure
+1: ActionCore
+	action: ActionContainer
+	content: ContentContainer
+	updateContent(ContentPayload)
+	updateAction(ActionPayload)
+2: ActionDirector
+	updateContent()
+	uodateAction()
+3: ActionContainer
+	update()
+		updateContainer()
+		uodateActionCenter()
+	view: ActionCenterClass
+	leftButton: ActionButton
+	rightButton: ActionButton
+4: ContentContainer
+	view: ContentClass
+5: [ActionCenterView]
+6: [ContentView]
+7: Models ...
+	...
+//------------------------------------------------------------------------------------------
+Update: 2
+1: SceneController
+2: SceneCore
+3: ContentContainer
+4: ContentCore
+5: [ContentViews]
+6: ActionContainer
+7: ActionCore
+8: ActionCenter
+9: [ActionButton]
+10: [ActionCenter]
+Models:
+	1: CorePayload
+		contentPayload
+			contentContainer
+			contentView
+		actionPayload
+			actionCenter
+			actionButtons
+			
+	2: ActionIcons
+	3: ActionButton
+		ButtonPayload
+		
+	5: ViewType
+		Content
+		Action
+			Center
+	6: ContentViewType
+	7: ActionViewLayout
+	8: ActionViewType
+	9: ActionCenterType
+
+
+
+
+
+
+
+
+
+
